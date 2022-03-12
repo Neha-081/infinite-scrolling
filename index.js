@@ -3,20 +3,7 @@
 const quotesEl = document.querySelector('.quotes');
 const loader = document.querySelector('.loader');
 
-// const getQuotes = async (page, limit) => {
-//     const API_URL = `https://api.javascripttutorial.net/v1/quotes/?page=${page}&limit=${limit}`;
-//     const response = await fetch(API_URL);
-//     // var data = await response.json();
-//     //     console.log("data",data);
-    
-//     if (!response.ok) {
-//         throw new Error(`An error occurred: ${response.status}`);
-//     }
-//     return await response.json();
-// }
-
-//show quotes
-const showQuotes = async (quotes,page,limit) => {
+const showQuotes = async (page,limit) => {
     const API_URL = `https://picsum.photos/v2/list?page=${page}&limit=${limit}`;
     const response = await fetch(API_URL);
     let data=await response.json()
@@ -117,32 +104,3 @@ loadQuotes(currentPage, limit);
 
 
 
-// async function imagesMain() {
-//     const response = await fetch("https://picsum.photos/v2/list?page=2&limit=100");
-//     var data = await response.json();
-//     console.log("data",data);
-  
-//     const allData=data.map((e)=>(
-      
-  
-//       `<div>
-//       <img src="${e.download_url}" class="photos"/>
-//       <div class="boxes">
-//       <p>AUTHOR : ${e.author}</p>
-//       <p>LIKES : ${e.width} likes</p>
-//       <p>DISLIKES : ${e.height} Dislikes</p>
-//       <p>URL : ${e.url}</p>
-//       </div>
-//       </div>
-//       `
-//      ))
-    
-  
-//     const mainBody=document.getElementById("container")
-//     mainBody.innerHTML=allData
-  
-  
-  
-//   }
-
-// imagesMain()
