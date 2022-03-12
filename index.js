@@ -7,7 +7,6 @@ const showQuotes = async (page,limit) => {
     const API_URL = `https://picsum.photos/v2/list?page=${page}&limit=${limit}`;
     const response = await fetch(API_URL);
     let data=await response.json()
-    let finalData=data.data
 
     data.forEach(quote => {
         const quoteEl = document.createElement('div');
